@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR Nexus</title>
+    <meta
+      name="description"
+      content="HR Nexus – Enterprise HR management platform with dashboard, attendance, leave, recruitment, and performance management."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login-screen" class="login-screen">
+      <header class="brand-header">
+        <div class="brand-logo-row" aria-label="HR Nexus logo">
+          <div class="brand-graphic" aria-hidden="true">
+            <span class="brand-h"></span>
+            <span class="brand-r"></span>
+            <span class="brand-user">
+              <span class="brand-user-head"></span>
+              <span class="brand-user-body"></span>
+            </span>
+          </div>
+          <div class="brand-text">HR Nexus</div>
+        </div>
+      </header>
+
+      <div class="auth-surface">
+        <div class="auth-main">
+          <div class="auth-blank" aria-hidden="true"></div>
+
+          <div class="auth-form-panel">
+            <p class="eyebrow muted">WELCOME BACK</p>
+            <h2>Sign in to your workspace</h2>
+
+            <form id="login-form" class="login-form">
+              <label>
+                <span>Email</span>
+                <input id="login-email" type="email" value="superadmin@hrnexus.io" required />
+              </label>
+
+              <label>
+                <span>Password</span>
+                <input id="login-password" type="password" value="Demo123!" required />
+              </label>
+
+              <div class="login-row">
+                <label class="remember-me">
+                  <input type="checkbox" checked />
+                  <span>Keep me signed in</span>
+                </label>
+                <button type="button" class="link-button">Forgot password?</button>
+              </div>
+
+              <button type="submit" class="primary-button wide">Sign in</button>
+            </form>
+
+            <div class="demo-section">
+              <p class="eyebrow muted">DEMO ACCESS</p>
+              <div class="demo-grid">
+                <button class="demo-role" data-role="Super Admin">Super Admin</button>
+                <button class="demo-role" data-role="HR Manager">HR Manager</button>
+                <button class="demo-role" data-role="Department Manager">Department Manager</button>
+                <button class="demo-role" data-role="Employee">Employee</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="app-shell" class="app-shell hidden">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="brand-mark compact">HN</div>
+          <div>
+            <p class="eyebrow muted">People Ops</p>
+            <h3>HR Nexus</h3>
+          </div>
+        </div>
+
+        <nav id="sidebar-nav" class="sidebar-nav"></nav>
+
+        <div class="sidebar-footer">
+          <div class="mini-card">
+            <span class="dot success"></span>
+            <div>
+              <strong>1,248</strong>
+              <small>Active employees</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-panel">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="icon-button mobile-only" id="menu-toggle" aria-label="Toggle sidebar">☰</button>
+            <nav id="breadcrumbs" class="breadcrumbs"></nav>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="search-box">
+              <span>⌕</span>
+              <input id="global-search" type="search" placeholder="Search employees, jobs, requests..." />
+            </label>
+
+            <button class="icon-button" aria-label="Notifications">🔔</button>
+            <button class="icon-button" aria-label="Help">?</button>
+            <button id="profile-button" class="profile-button" type="button">
+              <div class="avatar small">SA</div>
+              <div>
+                <strong id="profile-name">Super Admin</strong>
+                <small id="profile-role">Workspace owner</small>
+              </div>
+            </button>
+          </div>
+        </header>
+
+        <main id="main-content" class="main-content"></main>
+      </div>
+    </div>
+
+    <div id="modal-root"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
